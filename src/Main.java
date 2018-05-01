@@ -1,8 +1,8 @@
-package mytest;
+package src;
 
-public class MyClass{
+public class Main {
 	public static void main(String[] argv){
-		
+		System.out.println("Hello world");
 	}
 	
 	public int add(int _a, int _b){
@@ -13,4 +13,3 @@ public class MyClass{
 		return _a+_b;
 	}
 }
-
