@@ -1,4 +1,4 @@
-<project name="MyProject" default="compile" basedir=".">
+<project name="MyProject" default="clean" basedir=".">
 	<description>
 		simple example build file
 	</description>
@@ -16,10 +16,10 @@
 	
 	<target name="compile" depends="init" description="compile the source">
 		<!-- Compile the Java code from ${src} into ${build} -->
-		<javac srcdir="${src}" destdir="${build}"/>
+		<javac srcdir="${src}" destdir="${build}" classpath="/usr/bin/ant"/>
 	</target>
 	
-	<target name="clean" description="clean up">
+	<target name="clean" depends="compile" description="clean up">
 		<!-- Delete the ${build} and ${dist} directory trees -->
 		<delete dir="${build}"/>
 	</target>
